@@ -51,7 +51,9 @@ app.post('/push', async(req, res) => {
       Timestamp: timestamp,
       Password,
       PartyA: phone,
-      PartyB: data.BusinessShortCode
+      PartyB: data.BusinessShortCode,
+      AccountReference: "Test",
+      TransactionDesc: "Test"
   }
   try {
     const response = await http.post('/mpesa/stkpush/v1/processrequest', request)
